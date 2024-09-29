@@ -7,7 +7,7 @@ import seaborn as sns
 
 if __name__ == '__main__':
 
-    train_json = '/home/anonymous/data/ppe_data/train.json'  # trppe
+    train_json = '/home/anonymous/data/ppe_data/train.json' 
     with open(train_json, 'r') as file:
         data = json.load(file)
 
@@ -84,7 +84,7 @@ if __name__ == '__main__':
     ############################## 1 ##################################
     # Plotting distribution of annotations across categories
     fig_title = 'anno_distribution'
-    name_nickname = ['MA', 'MI', 'RC', 'NC', 'S', 'GA', 'GI', 'EA', 'FC', 'FI', 'SG', 'PG', 'GG', 'PR', 'HA', 'HC', 'Head'] 
+    name_nickname = ['MA', 'MI', 'RC', 'NC', 'S', 'GA', 'GI', 'GC', 'EA', 'FC', 'FI', 'SG', 'PG', 'GG', 'PR', 'HA', 'HC', 'Head'] 
     bar_x = {}
     for name in list(category_counts_named.keys()):
         if name == 'Head':
