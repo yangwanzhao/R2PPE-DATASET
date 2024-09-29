@@ -1,6 +1,6 @@
 #######################################################
-# This is to generate trppe dataset in coco format
-# path: /home/anonymous/data/ppe_data/PPE_TR-PPE/label_coco
+# This is to generate the dataset in coco format
+# path: /home/anonymous/data/ppe_data/PPE_R2PPE/label_coco
 #######################################################
 import os
 import json
@@ -9,7 +9,7 @@ import numpy as np
 from copy import deepcopy
 from collections import defaultdict
 
-PATH_ROOT = '/home/anonymous/data/ppe_data/PPE_TR-PPE'
+PATH_ROOT = '/home/anonymous/data/ppe_data/PPE_R2PPE'
 PATH_JSON = os.path.join(PATH_ROOT, 'label_v7')
 PATH_DATA = os.path.join(PATH_ROOT, 'images')
 PATH_COCO = os.path.join(PATH_ROOT, 'label_coco')
@@ -89,9 +89,10 @@ if __name__ == '__main__':
     test_json = {'images':[], 'annotations': [], 'categories': []}
     label_tuple = [train_json, test_json]
 
-    # 17 classes; Order is important!
+    # 18 classes; Order is important!
     category_all = ['Gown_Absent_ga',
                 'Gown_Incomplete_gi',
+                'Gown_Complete_gc',
                 'Glove_Absent_ha',
                 'Glove_Complete_hc',
                 'Regular_Mask_Complete_rc',
